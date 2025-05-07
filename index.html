@@ -41,7 +41,7 @@
       <p>Clicks: <span id="click-count">0</span></p>
       <p>Clicks por segundo: <span id="cps-count">0</span></p>
       <button id="click-button">
-        <img src="/assets/images/rock.png" id="click-image" />
+        <img src="assets/images/rock.png" id="click-image" />
       </button>
     </div>
     <div id="upgrades-container">
@@ -65,12 +65,12 @@ const img = document.getElementById("click-image");
 
 button.addEventListener("click", () => {
   // Cambia la imagen temporalmente
-  img.src = "/assets/images/rock-break.png"; // imagen cuando se hace click
+  img.src = "assets/images/rock-break.png"; // imagen cuando se hace click
   button.classList.add("clicked");
 
   // Vuelve a la imagen original tras un breve tiempo
   setTimeout(() => {
-    img.src = "img/idle.png";
+    img.src = "assets/images/rock.png";
     button.classList.remove("clicked");
   }, 150); // 150ms para que parezca una animación rápida
 });
