@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="clicks-container">
+      <h1>Clicker Game</h1>
+      <p>Clicks: <span id="click-count">0</span></p>
+      <p>Clicks por segundo: <span id="cps-count">0</span></p>
+      <button id="click-button">Click Me!</button>
+    </div>
+    <div id="upgrades-container">
+      <h2>Mejoras de Click</h2>
+    <div id="click-upgrades"></div>
+    <h2>AutoClickers</h2>
+    <div id="auto-clickers"></div>
+    <button id="reset-button">Reiniciar Juego</button>
+    </div>
+    <div id="animals-container">
+      <h2>Animales Trabajando</h2>
+  </div>
+  <div id="inventory-container">
+    <h2>Inventario</h2>
+    <div id="inventory"></div>
+</div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/animals.js"></script>
+  <script src="js/upgrades.js"></script>
+  <script src="js/storage.js"></script>
+</body>
+
+</html>

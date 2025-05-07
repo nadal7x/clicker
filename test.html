@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roca Animada</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #rock {
+      width: 300px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .fragment {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #4effb8;
+      opacity: 0.8;
+      border-radius: 50%;
+      animation: explode 0.8s ease-out forwards;
+    }
+
+    @keyframes explode {
+      0% { transform: translate(0, 0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <img src="1741887242831.png" id="rock" alt="Roca Pixel Art">
+
+  <script>
+    const rock = document.getElementById("rock");
+
+    rock.addEventListener("click", (e) => {
+      for (let i = 0; i < 10; i++) {
+        const fragment = document.createElement("div");
+        fragment.classList.add("fragment");
+        
+        const offsetX = (Math.random() - 0.5) * 300;
+        const offsetY = (Math.random() - 0.5) * 300;
+
+        fragment.style.setProperty('--x', `${offsetX}px`);
+        fragment.style.setProperty('--y', `${offsetY}px`);
+
+        fragment.style.left = `${e.clientX}px`;
+        fragment.style.top = `${e.clientY}px`;
+
+        document.body.appendChild(fragment);
+
+        setTimeout(() => fragment.remove(), 800);
+      }
+    });
+  </script>
+</body>
+</html>

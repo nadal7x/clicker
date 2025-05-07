@@ -1,0 +1,1 @@
+//(Aquí se agregarían minijuegos en el futuro)
